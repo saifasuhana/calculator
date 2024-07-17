@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+<div class="row justify-content-center">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">Calculator</div>
+<div class="card-body">
+<input type="text" id="display" class="form-control mb-2"
+readonly>
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('.')">.</button>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('7')">7</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('8')">8</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('9')">9</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('/')">/</button>
+</div>
+</div>
+11
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('4')">4</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('5')">5</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('6')">6</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('*')">*</button>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('1')">1</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('2')">2</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('3')">3</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('-')">-</button>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('0')">0</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="clearDisplay()">C</button>
+</div>
+12
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="calculateResult()">=</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-secondary btn-block"
+onclick="appendToDisplay('+')">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+let display = document.getElementById('display');
+function appendToDisplay(value) {
+display.value += value;
+}
+function clearDisplay() {
+display.value = '';
+}
+function calculateResult() {
+try {
+display.value = eval(display.value);
+} catch (error) {
+display.value = 'Error';
+}
+}
+</script>
+</body>
+</html>
