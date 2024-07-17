@@ -1,0 +1,1 @@
+This project  involved creating a basic calculator interface that users can interact with to perform mathematical operations.Users could input numbers and perform operations such as addition, subtraction, multiplication, and division.
